@@ -26,11 +26,12 @@ int main()
    * as a kernel on the GPU.
    */
 
-  helloGPU();
+  helloGPU<<<1,1>>>();
 
   /*
    * Add code below to synchronize on the completion of the
    * `helloGPU` kernel completion before continuing the CPU
    * thread.
    */
+  cudaDeviceSynchronize();
 }
