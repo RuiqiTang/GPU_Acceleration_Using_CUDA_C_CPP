@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <cuda_runtime.h>
 /*
  * Refactor firstParallel so that it can run on the GPU.
  */
@@ -16,7 +16,7 @@ int main()
    * on the GPU.
    */
 
-  firstParallel<<<5,5>>>();
+  firstParallel<<<1,5>>>();
 
   /*
    * Some code is needed below so that the CPU will wait
